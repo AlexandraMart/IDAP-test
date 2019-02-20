@@ -1,0 +1,14 @@
+@mixin mixin-circle($size, $background-color, $color) {
+    background: $background-color;
+    border-radius: 50%;
+    color: $color;
+    height: $size;
+    line-height: $size;
+    text-align: center;
+    width: $size;
+
+    span {
+        display: block;
+        line-height: $size;
+    }
+}

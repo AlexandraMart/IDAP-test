@@ -1,0 +1,81 @@
+@import "variables";
+
+.left-panel{
+    background: #242a31;
+    font-family:"Freight-Sans-Medium";
+    width: 129px;
+    height: 100vh;
+    position: fixed;
+
+    .left-panel-bottom {
+        padding-bottom: 15px;
+    }
+
+    .left-panel-top-profile {
+        background-image: url(../img/profile-1.jpg);
+        background-size: contain;
+        background-position: center;
+        border-radius: 50%;
+        height: 88px;
+        margin: 20px auto 0 auto;
+        position: relative;
+        width: 88px;
+
+        .red-circle {
+            font-family: "HelveticaNeueCondensedBold";
+            font-size: 16px;
+            right: 0;
+            top: -10px;
+            position: absolute;
+        }
+    }
+
+    .left-panel-link {
+        color: $color-grey;
+        font-size: 18px;
+        margin: 0 20px;
+        padding-top: 10px;
+        position: relative; 
+        text-align: center;
+
+        .left-panel-link-text {
+            color: $color-white;
+            font-size: 18px;
+            line-height: 1;
+            padding-top: 8px;
+        }
+
+        .icon-dots-three-horizontal {
+            font-size: 26px;
+        }
+
+        &.left-panel-link-circle {
+            padding-top: 12px;
+
+            .grey-circle {
+                position: absolute;
+                right: 0;
+                top: 3px;
+            }
+        }
+
+        &:hover {
+
+            @each $icon-left-panel in meter, menu, dots-three-horizontal, dots-three-horizontal, switch, cog {
+                .icon-#{$icon-left-panel} {
+                    color: $color-red;
+                }
+            }
+        }
+
+        @each $icon-left-panel in meter, menu, dots-three-horizontal, switch, cog {
+            .icon-#{$icon-left-panel} {
+                font-size: 36px;
+            }
+        }
+
+        .icon-dots-three-horizontal {
+            font-size: 24px;
+        }
+    }
+}
